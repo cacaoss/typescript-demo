@@ -1,0 +1,19 @@
+{
+  "name": "typescript-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:cacaoss/typescript-demo.git",
+  "author": "cacaoss <327433675@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "tsc": "tsc",
+    "tsc-init": "tsc --init"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.6"
+  }
+}
