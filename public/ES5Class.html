@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ES5 Class</title>
+    </head>
+    <body>
+        <script>
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+                this.work = () => {
+                    return `${this.name} ${this.age}`;
+                };
+            }
+
+            Person.prototype.eat = function () {
+                return `${this.name} eat somthing`;
+            };
+
+            Person.getInfo = function () {
+                return `Person GetInfo`;
+            };
+
+            const p = new Person('ZZH', 28);
+
+            // console.log(p);
+            // console.log(p.work());
+            // console.log(p.eat());
+            // console.log(Person.getInfo());
+
+            function Web(name, age) {
+                Person.call(this, name, age);
+            }
+            Web.prototype = Person.prototype;
+
+            const web = new Web('Haha', 12);
+            console.log(web);
+            console.log(web.work());
+            console.log(web.eat());
+        </script>
+    </body>
+</html>
